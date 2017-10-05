@@ -97,6 +97,13 @@ module.exports = function (config) {
         // - IE (only Windows)
         browsers: ['ChromiumHeadless'],
 
+        customLaunchers: {
+          ChromiumHeadless: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+          }
+        },
+
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
         singleRun: false,
