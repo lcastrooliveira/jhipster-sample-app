@@ -100,7 +100,7 @@ module.exports = function (config) {
         customLaunchers: {
           ChromiumHeadless: {
             base: 'Chromium',
-            flags: ['--no-sandbox']
+            flags: ["--headless", "--no-sandbox", "--disable-gpu"]
           }
         },
 
