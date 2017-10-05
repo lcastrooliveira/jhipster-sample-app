@@ -54,7 +54,7 @@ node {
     }
 
     stage('publish docker') {
-        docker.withRegistry('179.106.217.217:5000') {
+        docker.withRegistry('http://179.106.217.217:5000') {
             dockerImage.push 'latest'
         }
     }
