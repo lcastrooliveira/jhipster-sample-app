@@ -36,6 +36,7 @@ node {
         stage('packaging') {
             sh "./mvnw package -Pprod -DskipTests"
             archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
+            sh "chown -R /target 1000:1000"
         }
 
         stage('quality analysis') {
