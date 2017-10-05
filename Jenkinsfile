@@ -5,7 +5,7 @@ node {
         checkout scm
     }
 
-    docker.image('lcastrooliveira/java-libxss1').inside('-u root -e MAVEN_OPTS="-Duser.home=./"') {
+    docker.image('lcastrooliveira/java-libxss1').inside('MAVEN_OPTS="-Duser.home=./"') {
         stage('check java') {
             sh "java -version"
         }
