@@ -50,7 +50,7 @@ node {
     stage('build docker') {
         sh "cp -R src/main/docker target/"
         sh "cp target/*.war target/docker/"
-        dockerImage = docker.build('lasse/jhipstersampleapplication', 'target/docker')
+        dockerImage = docker.build('jhipstersampleapplication', 'target/docker')
     }
 
     stage('publish docker') {
