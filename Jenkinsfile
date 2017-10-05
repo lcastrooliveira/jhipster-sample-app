@@ -35,7 +35,7 @@ node {
 
         stage('frontend tests') {
             try {
-                sh "./mvnw com.github.eirslett:frontend-maven-plugin:gulp -Dfrontend.gulp.arguments=test"
+                sh "./mvnw -e com.github.eirslett:frontend-maven-plugin:gulp -Dfrontend.gulp.arguments=test"
             } catch(err) {
                 throw err
             } finally {
